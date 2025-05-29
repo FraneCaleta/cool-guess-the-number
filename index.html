@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A fun and engaging Guess the Number game with beautiful animations and effects"
+    />
+    <meta name="theme-color" content="#4f46e5" />
+    <title>Guess the Number Game</title>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+    <!-- PWA Support -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Guess the Number" />
+  </head>
+  <body>
+    <div class="stars"></div>
+    <div class="container">
+      <div class="game-card">
+        <div class="game-header">
+          <h1 class="animate__animated animate__fadeInDown">
+            Number Guesser Pro
+          </h1>
+          <p class="subtitle">Can you find the hidden number?</p>
+        </div>
+
+        <div class="game-content">
+          <div class="number-display animate__animated" id="numberDisplay">
+            <span id="targetNumber">?</span>
+          </div>
+
+          <div class="input-group">
+            <input
+              type="number"
+              id="guessInput"
+              placeholder="Enter your guess"
+              min="1"
+              max="100"
+              class="guess-input"
+            />
+            <button id="guessButton" class="guess-button">
+              <span>Guess</span>
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path
+                  fill="currentColor"
+                  d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div class="game-stats">
+            <div id="attempts" class="stat-box">
+              <span class="stat-label">Attempts</span>
+              <span class="stat-value" id="attemptsValue">0</span>
+            </div>
+            <div id="rangeDisplay" class="stat-box range-display">
+              <span class="stat-label">Range</span>
+              <span class="stat-value" id="rangeValue">1 - 100</span>
+            </div>
+          </div>
+
+          <div id="feedback" class="feedback"></div>
+
+          <button id="newGame" class="new-game-btn">
+            <span>New Game</span>
+            <svg viewBox="0 0 24 24" width="20" height="20">
+              <path
+                fill="currentColor"
+                d="M12,4C14.1,4 16.1,4.8 17.6,6.3C20.7,9.4 20.7,14.5 17.6,17.5C15.5,19.6 12.5,20 10.2,18.9L11.2,16.9C12.8,17.6 14.8,17.2 16.1,15.9C18.3,13.6 18.3,9.9 16.1,7.7C15.1,6.7 13.7,6 12,6V10.6L7,5.6L12,0.6V4M6.3,17.6C3.7,15 3.3,11 5.1,7.9L6.5,9.3C5.3,11.6 5.7,14.4 7.7,16.4C8.2,16.9 8.8,17.3 9.4,17.6L6.3,17.6Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="particles" id="particles"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>

@@ -2,6 +2,8 @@
 
 A modern, interactive number guessing game built with vanilla JavaScript, HTML5, and CSS3. Test your intuition and guessing skills as you try to find the hidden number within 10 attempts!
 
+### This project was fully developed using Windsurf AI to explore its capabilities and test its features.
+
 ![Game Screenshot](screenshot.png)
 
 ## Features

@@ -1,4 +1,4 @@
-# Guess the Number Game
+# Cool Guess the Number Game
 
 A modern, interactive number guessing game built with vanilla JavaScript, HTML5, and CSS3. Test your intuition and guessing skills as you try to find the hidden number within 10 attempts!
 
@@ -24,30 +24,37 @@ A modern, interactive number guessing game built with vanilla JavaScript, HTML5,
 ## Installation
 
 1. Clone the repository:
+
    ```bash
-   git clone https://github.com/FraneCaleta/guess-the-number.git
-   cd guess-the-number
+   git clone https://github.com/FraneCaleta/cool-guess-the-number.git
+   cd cool-guess-the-number
    ```
 
 2. Start a local server (choose one of the following methods):
 
    **Python 3 (recommended):**
+
    ```bash
    # For Python 3
    python3 -m http.server 8000
    ```
+
    Then open `http://localhost:8000` in your web browser.
 
    **Or using PHP (if installed):**
+
    ```bash
    php -S localhost:8000
    ```
+
    Then open `http://localhost:8000` in your web browser.
 
    **Or using Node.js with http-server (if installed):**
+
    ```bash
    npx http-server -p 8000
    ```
+
    Then open `http://localhost:8000` in your web browser.
 
    > **Note:** Using a local server is necessary for the game to work properly due to browser security restrictions when loading local files.
